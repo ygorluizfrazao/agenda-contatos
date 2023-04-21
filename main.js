@@ -2,6 +2,7 @@ const contacts = [];
 
 const whatsAppLinkBase = 'https://api.whatsapp.com/send?phone='
 
+const contactsTableBody = document.getElementById('contacts-table-body')
 const buttonCreateNew = document.getElementById("button-create-new-contact");
 const popupFrame = document.getElementsByClassName("modal-overlay")[0];
 
@@ -87,4 +88,8 @@ function dismissPopup() {
 function showPopup() {
   popupFrame.classList.remove("hidden");
   popupFrame.classList.add("show");
+}
+
+function updateTable() {
+
 }
