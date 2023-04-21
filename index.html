@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de Contatos</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script defer src="main.js"></script>
+  </head>
+
+  <div class="main-container">
+    <body>
+      <header>
+        <div class="title-container">
+          <img src="/images/pngegg (1).png" alt="Ícone de Agenda" />
+          <h1>Agenda de Contatos</h1>
+        </div>
+      </header>
+
+      <main>
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <th>
+                <h2>Nome</h2>
+              </th>
+              <th>
+                <h2>Fone</h2>
+              </th>
+              <th>
+                <h2>Ações</h2>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Ygor Luiz Frazão Campos da Silva</td>
+              <td>+5598991461569</td>
+              <td>
+                <div class="record-actions">
+                  <button class="button green">
+                    <div class="icon-container">
+                      <span class="icon material-symbols-outlined"> call </span>
+                    </div>
+                  </button>
+                  <button class="button green">
+                    <div class="icon-container">
+                      <span>
+                        <a
+                          href="https://api.whatsapp.com/send?phone=5598991461569"
+                          title="Ir para o whatsapp"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src="images/iconmonstr-whatsapp-1.svg"
+                            alt="Open whatsapp"
+                          />
+                        </a>
+                      </span>
+                    </div>
+                  </button>
+                  <button class="telegram-btn button">
+                    <div class="icon-container">
+                      <span>
+                        <img
+                          src="images/iconmonstr-telegram-1.svg"
+                          alt="Open Telegram"
+                        />
+                      </span>
+                    </div>
+                  </button>
+                  <button class="button red">
+                    <div class="icon-container">
+                      <span class="icon material-symbols-outlined">
+                        delete
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="2">
+                <button class="button" id="button-create-new-contact">
+                  <div class="text-container">
+                    <span class="text">Novo</span>
+                  </div>
+                  <div class="icon-container">
+                    <span class="icon material-symbols-outlined"> add </span>
+                  </div>
+                </button>
+              </td>
+              <td>
+                <h3>Total: 1</h3>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </main>
+      <div class="modal-overlay hidden">
+        <div class="add-popup">
+          <div class="add-popup-title">
+            <h2>Adicionar Novo</h2>
+          </div>
+          <form>
+            <div class="input-box">
+              <label for="contact-name"><h3>Nome:</h3></label>
+              <input
+                type="text"
+                id="contact-name"
+                placeholder="Nome do contado"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="contact-phone"><h3>Fone:</h3></label>
+              <input
+                type="tel"
+                id="contact-phone"
+                placeholder="+55 99 9 9999-9999"
+                required
+              />
+            </div>
+            <div class="popup-buttons">
+              <button type="submit" class="button green" id="button-save">
+                <div class="text-container">
+                  <span class="text">Salvar</span>
+                </div>
+                <div class="icon-container">
+                  <span class="icon material-symbols-outlined"> save </span>
+                </div>
+              </button>
+              <button class="button red" id="button-cancel">
+                <div class="text-container">
+                  <span class="text">Cancelar</span>
+                </div>
+                <div class="icon-container">
+                  <span class="icon material-symbols-outlined"> close </span>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+  </div>
+</html>
